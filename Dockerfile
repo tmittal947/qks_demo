@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir notebook==5.7.8 jupyterlab==0.35.4
 # install the runtime dependencies for the lecture notebook
 RUN pip install --no-cache-dir matplotlib==3.0.3 pyquil==2.9.1
 RUN pip install --no-cache-dir cython==0.29.6 numpy==1.16.2 scipy==1.2.1
-RUN pip install --no-cache-dir qutip==4.3.1
+RUN pip install --no-cache-dir sklearn==0.0
 
 # create user with UID 1000 and associated home dir (required by binder)
 ARG NB_USER=binder
