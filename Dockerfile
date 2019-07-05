@@ -1,8 +1,10 @@
 FROM rigetti/qvm:1.8.2 as qvm
+FROM rigetti/quilc:1.8.2 as quilc
 FROM python:3.6
 
 # copy over the pre-built qvm & quilc binaries from the first build stage
 COPY --from=qvm /src /src
+COPY --from=quilc /src /src
 
 # install the missing apt requirements that can't be copied over
 RUN apt-get update && apt-get -yq dist-upgrade && \

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 /src/qvm/qvm -S &
+/src/quilc/quilc -S &
 
 exec "$@"
 
