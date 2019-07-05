@@ -9,6 +9,7 @@ COPY --from=quilc /src /src
 # install the missing apt requirements that can't be copied over
 RUN apt-get update && apt-get -yq dist-upgrade && \
     apt-get install --no-install-recommends -yq \
+    libblas-dev libffi-dev liblapack-dev libzmq3-dev \
     git libblas-dev libffi-dev liblapack-dev && \
     rm -rf /var/lib/apt/lists/*
 
